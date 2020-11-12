@@ -58,7 +58,7 @@ export default function SearchPhotos() {
                 src={pic.thumbnail}
               />
             </a>
-            <div>{pic.title}</div>
+            {pic.title}
           </div>
         ))}
       </div>
