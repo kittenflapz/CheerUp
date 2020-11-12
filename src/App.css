@@ -1,6 +1,6 @@
-*{
+* {
   box-sizing: border-box;
-  background-color:#fb8be3;
+  background-color: #fb8be3;
   color: #060405;
   font-size: 10px;
 }
@@ -17,21 +17,19 @@
   padding: 40px;
 }
 
-
 .title {
   font-size: 4.4rem;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-.form{
+.form {
   display: grid;
 }
 
-.label{
+.label {
   font-size: 3rem;
   margin-bottom: 1rem;
 }
-
 
 .input {
   font-size: 1.6rem;
@@ -41,7 +39,6 @@
   background-color: white;
   margin-bottom: 1rem;
 }
-
 
 .button {
   background-color: rgba(0, 0, 0, 0.75);
@@ -54,11 +51,9 @@
   transition: background-color 250ms;
 }
 
-
 .button:hover {
   background-color: rgba(0, 0, 0, 0.85);
 }
-
 
 .card-list {
   margin-top: 3rem;
@@ -66,19 +61,18 @@
   column-count: 5;
 }
 
-
 .card {
   margin-bottom: 1rem;
   border-radius: 10px;
   display: flexbox;
-  font-size: .8rem;
+  font-size: 0.8rem;
   font-variant: small-caps;
   text-emphasis-color: aqua;
 }
 
 .card--image {
   margin-top: 2rem;
-  margin-bottom: .1rem;
+  margin-bottom: 0.1rem;
   margin-left: 2rem;
   margin-right: 2rem;
   border-radius: 10px;
@@ -96,7 +90,7 @@
 }
 
 @media only screen and (max-width: 600px) {
-    .card-list {
-        column-count: 1;
-    }
+  .card-list {
+    column-count: 1;
+  }
 }
