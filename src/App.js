@@ -11,7 +11,7 @@ render()
   return (
     <section className="App">
      <div className="container">
-       <h1 className="title"> Cheer up! Here's some cute stuff.</h1>
+       <h1 className="title"> Cheer up. Here's some cute stuff.</h1>
        <SearchPhotos />
      </div>    
     </section>
