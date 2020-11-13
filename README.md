@@ -2,7 +2,7 @@
 
 This is a short and sweet web app that gets thumbnail images from reddit.com/r/aww, displays them on the screen, and includes a search function for when you're in the mood for something sweet and specific.
 
-It uses React and is hosted on Netlify [here](https://keen-wright-af9e6f.netlify.app/)
+It uses React and is hosted on Netlify [here](https://keen-wright-af9e6f.netlify.app/).
 
 
 ## Usage
