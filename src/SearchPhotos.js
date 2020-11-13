@@ -43,9 +43,8 @@ export default function SearchPhotos() {
         </button>
       </form>
 
-      {
-        //{!loading && pics.length === 0 && "no pics found"}
-      }
+      {!loading && pics.length === 0 && "no pics found"}
+    
       {loading && <ClipLoader />}
 
       <div className="card-list">
