@@ -7,4 +7,4 @@ It uses React and is hosted on Netlify [here](https://keen-wright-af9e6f.netlify
 
 ## Usage
 
-You can use Cheer Up like Google Images, except results will be limited to only adorable things --so in a way, it's preferable to Google--. 
+You can use Cheer Up like Google Images, except results will be limited to only adorable things ~~so in a way, it's preferable to Google~~. 
