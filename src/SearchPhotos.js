@@ -5,23 +5,31 @@ export default function SearchPhotos() {
   const [query, setQuery] = useState("");
   const [pics, setPics] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [firstSearchDone, setFirstSearch] = useState(false);
+  const [err, setError] = useState(false);
   const searchPhotos = async (e) => {
     setLoading(true);
+    setFirstSearch(true);
     e.preventDefault();
-    const uri = `https://www.reddit.com/r/aww/search.json?q=${query}&restrict_sr=true&limit=50`;
-    const response = await fetch(uri);
-    const data = await response.json();
+    try {
+      const uri = `https://www.reddit.com/r/aww/search.json?q=${query}&restrict_sr=true&limit=50`;
 
-    const postData = data.data.children
-      .filter(
-        (post) =>
-          post.data.thumbnail !== "default" && post.data.thumbnail !== "self"
-      )
-      .map((post) => post.data);
+      const response = await fetch(uri);
+      const data = await response.json();
 
-    console.log(postData);
-    setLoading(false);
-    setPics(postData);
+      const postData = await data.data.children
+        .filter(
+          (post) =>
+            post.data.thumbnail !== "default" && post.data.thumbnail !== "self"
+        )
+        .map((post) => post.data);
+
+      setLoading(false);
+      setPics(postData);
+    } catch (error) {
+      setError(true);
+      console.error(error);
+    }
   };
 
   return (
@@ -43,9 +51,14 @@ export default function SearchPhotos() {
         </button>
       </form>
 
-      {!loading && pics.length === 0 && "no pics found"}
-    
-      {loading && <ClipLoader />}
+      {firstSearchDone &&
+        !loading &&
+        pics.length === 0 &&
+        "No pictures found! Don't worry, there are lots of other cute things. Try 'ferret' or 'meow'."}
+
+      {!err && loading && <ClipLoader />}
+
+      {err && "Something went wrong. Try again later!"}
 
       <div className="card-list">
         {pics.map((pic) => (
